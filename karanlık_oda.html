@@ -1,0 +1,27 @@
+<div class="karanlik-oda">
+    <div class="isik"></div>
+    <h1 class="gizli-mesaj">💎 GİZLİ ELMASI BULDUN! 💎</h1>
+</div>
+
+<style>
+    .karanlik-oda { 
+        background: black; height: 400px; position: relative; 
+        overflow: hidden; cursor: none; display: flex; 
+        align-items: center; justify-content: center; 
+    }
+    .gizli-mesaj { color: gold; font-size: 20px; opacity: 0.1; }
+    .isik {
+        position: absolute; width: 150px; height: 150px;
+        background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, transparent 70%);
+        pointer-events: none; /* Işık yazının üstüne gelse bile yazıyı engellemez */
+    }
+</style>
+
+<script>
+    const oda = document.querySelector('.karanlik-oda');
+    const isik = document.querySelector('.isik');
+    oda.addEventListener('mousemove', e => {
+        isik.style.left = e.offsetX - 75 + 'px';
+        isik.style.top = e.offsetY - 75 + 'px';
+    });
+</script>

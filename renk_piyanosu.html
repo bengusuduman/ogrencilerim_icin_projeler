@@ -1,0 +1,19 @@
+<div class="piyano">
+    <div class="tus" style="--renk: #ff4757;"></div>
+    <div class="tus" style="--renk: #2ed573;"></div>
+    <div class="tus" style="--renk: #1e90ff;"></div>
+    <div class="tus" style="--renk: #ffa502;"></div>
+    <div class="tus" style="--renk: #3742fa;"></div>
+</div>
+
+<style>
+    .piyano { display: flex; height: 300px; gap: 10px; padding: 20px; }
+    .tus { 
+        flex: 1; background: #ddd; border-radius: 10px;
+        transition: 0.3s; /* Buradaki süreyi değiştirip denesinler! */
+    }
+    .tus:hover { 
+        background-color: var(--renk); 
+        transform: translateY(-20px) scale(1.1); /* Yukarı zıplama efekti */
+    }
+</style>

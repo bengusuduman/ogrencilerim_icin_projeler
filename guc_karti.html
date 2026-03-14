@@ -1,0 +1,30 @@
+<div class="kart-kapsayici">
+    <div class="kart">
+        <div class="kart-on">
+            <h2>👾 Karakterin</h2>
+            <p>(Üzerime gel!)</p>
+        </div>
+        <div class="kart-arka">
+            <h2>Süper Güçler</h2>
+            <p>🔥 Ateş: 90</p>
+            <p>⚡ Hız: 100</p>
+            <p>🛡️ Defans: 50</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .kart-kapsayici { perspective: 1000px; width: 200px; height: 300px; margin: auto; }
+    .kart { 
+        width: 100%; height: 100%; position: relative; 
+        transition: transform 0.8s; transform-style: preserve-3d; 
+    }
+    .kart-kapsayici:hover .kart { transform: rotateY(180deg); }
+    .kart-on, .kart-arka { 
+        position: absolute; width: 100%; height: 100%; 
+        backface-visibility: hidden; border-radius: 15px;
+        display: flex; flex-direction: column; align-items: center; justify-content: center;
+    }
+    .kart-on { background: #ff6b6b; color: white; }
+    .kart-arka { background: #4ecdc4; color: white; transform: rotateY(180deg); }
+</style>
